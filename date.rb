@@ -2,8 +2,7 @@
 day = 1
 month = 1
 
-while day <=31 && day > 0 && month <=12&& month > 0 do
-
+if (day = (0...31) && month = (0...12))
 
   print"Enter day:"
   day = gets.chomp.to_i
@@ -27,6 +26,7 @@ dm[1] = 29 if (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)
 
       end
   puts "#{serial_nmd}"
+
 end
 
 
