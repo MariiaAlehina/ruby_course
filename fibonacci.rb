@@ -7,8 +7,9 @@
 
 
 def f(i)
-  i.times.each_with_object([0,1]) { |num, obj| obj << obj[-2] + obj[-1] }
-end
-f(10)
+  return i if (0..1).include? i
+  f(i-1) +f(i-2) if i>1
 
-puts f( 10 )
+end
+
+puts f( )
