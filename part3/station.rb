@@ -1,5 +1,4 @@
 # Класс Station (Станция):
-#
 # Имеет название, которое указывается при ее создании
 # Может принимать поезда (по одному за раз)
 # Может показывать список всех поездов на станции, находящиеся в текущий момент
@@ -12,15 +11,15 @@ class Station
 
   def initialize(name, *trains)
     @name = name
-    # @trains = {trains: type}
     @trains = trains
+    # @trains = {trains: type}
   end
 
   def new_train(train)
     trains << train
   end
 
-  def train_online
+  def train_at_the_station
     puts "Trains: #{@trains}"
   end
 
@@ -31,11 +30,6 @@ class Station
   def train_with_one_type(tp)
    one_type_trains = trains.select{|trains, type| type == tp}
     puts"#{one_type_trains.keys}"
-  end
-
-
-  def remove_train (train)
-    trains.delete(train)
   end
 
 end

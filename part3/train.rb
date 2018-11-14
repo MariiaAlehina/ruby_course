@@ -10,17 +10,14 @@
 # Может перемещаться между станциями, указанными в маршруте.
 # Показывать предыдущую станцию, текущую, следующую, на основе маршрута
 
-
 class Train
 
-  # attr_reader :route
+  attr_reader :route
 
-  def initialize(number, type, count_cars, *route)
+  def initialize(number, type, count_cars)
     @number =number
     @type = type
     @count_cars = count_cars.to_i
-    @station_id = 0
-    @route = route
   end
 
   def speed=(speed)
@@ -54,7 +51,7 @@ class Train
   end
 
   def train_station
-    route[@station_id]
+    route[0]
   end
 
   # def to_next_station
@@ -62,11 +59,11 @@ class Train
   # end
 
   def next_station
-    route[@station_id+1]
+    route[1]
   end
 
   def previous_station
-    route[@station_id-1]
+    route[i-1]
   end
 
   def move
