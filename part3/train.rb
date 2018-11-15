@@ -20,7 +20,7 @@ class Station
   end
 
   def train_with_one_type(type)
-    trains.find_all{|train, type| train.type == @type}
+    trains.find_all{|train| type == type}
   end
 
 end
