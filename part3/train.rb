@@ -20,7 +20,7 @@ class Station
   end
 
   def train_with_one_type(type)
-    trains.find_all{|train| type == type}
+    trains.select{|trains| trains.type == type}
   end
 
 end
@@ -47,7 +47,7 @@ end
 
 class Train
 
-  attr_reader :route
+  attr_reader :route, :type
 
   def initialize(number, type, count_cars)
     @number =number
@@ -86,7 +86,7 @@ class Train
   end
 
   def train_station
-    @station_name
+    self.station_name
   end
 
   def next_station
