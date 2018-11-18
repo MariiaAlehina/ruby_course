@@ -1,11 +1,10 @@
 class Station
 
-  attr_reader :name, :trains
+  attr_reader :station_name, :trains
 
-  def initialize(name, *trains)
-    @name = name
-    @trains = trains
-    # @trains = {trains: type}
+  def initialize(station_name)
+    @station_name = station_name
+    @trains = []
   end
 
   def new_train(train)
@@ -13,21 +12,15 @@ class Station
   end
 
   def train_at_the_station
-    puts "Trains: #{@trains}"
+    puts "Trains: #{trains}"
   end
 
   def remove_train (train)
     trains.delete(train)
   end
 
-  def train_with_one_type(tp)
-   one_type_trains = trains.select{|trains, type| type == tp}
-    puts"#{one_type_trains.keys}"
+  def train_with_one_type(type)
+    trains.select{|trains| trains.type == type}
   end
 
 end
-
-
-
-
-

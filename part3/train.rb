@@ -26,28 +26,30 @@ class Station
 end
 
 class Route
+  attr_accessor :train_route, :station_name
 
   def initialize(first_station, last_station)
-    @route = [first_station, last_station]
+    @train_route = [first_station, last_station]
   end
 
-  def intermediate_station (station)
-    @route.insert(-2, station)
+  def intermediate_station(station)
+    @train_route.insert(-2, station.station_name)
   end
 
   def delete_intermediate_st(station)
-    @route.delete(station)
+    @train_route.delete(station)
   end
 
   def show_route
-    puts "#{@route}"
+    puts "#{@train_route}"
   end
 
 end
 
-class Train
+class Train2
 
-  attr_reader :route, :type
+  attr_accessor :train_route, :station, :station_name
+  attr_reader :type
 
   def initialize(number, type, count_cars)
     @number =number
@@ -81,26 +83,21 @@ class Train
     end
   end
 
-  def train_route(route)
-    @route = route
+  def tr_route(route)
+    @train_route = route.train_route
+  end
+
+  def go_to(station)
+    @station_name = station.station_name
+    station.new_train(self)
   end
 
   def train_station
-    self.station_name
-  end
-
-  def next_station
-    route[1]
-  end
-
-  def previous_station
-    route[-1]
-  end
-
-  def move(station)
-
+    train_route_station = self.train_route.detect{|name|name == self.station_name}
+    station_index = self.train_route.find_index(train_route_station)
+    puts "The train is at the station #{self.station_name}"
+    puts "Past station #{self.train_route[station_index - 1]}"
+    puts "Previous station #{self.train_route[station_index + 1]}"
   end
 
 end
-
-

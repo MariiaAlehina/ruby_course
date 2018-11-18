@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8" />
+
+    <script>
+        function add() {
+            var a = parseInt(document.getElementById('a').value);
+            var b = parseInt(document.getElementById('b').value);
+            var c = parseInt(document.getElementById('c').value);
+
+            var d = a + b + c;
+            var d = document.getElementById('result').innerHTML = a + " + " + b + " + " + c + " = " + d;
+        }
+    </script>
+</head>
+<body>
+<form>
+    <input id="a" type="text"><br>
+    <input id="b" type="text"><br>
+    <input id="c" type="text"><br>
+    <div id ="result"></div>
+    <input type="button" value="Add" onclick="add();"><br>
+</form>
+</body>
