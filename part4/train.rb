@@ -15,17 +15,15 @@ class Train
     puts "#{@cars}"
   end
 
-  def show_count_cars
-    puts "#{@count_cars}"
-  end
-
   def hook_cars
     @count_cars = @count_cars + 1 if @speed == 0
+    puts "#{@count_cars}"
   end
 
   def unhook_cars
     if @speed == 0
       @count_cars = @count_cars - 1
+      puts "#{@count_cars}"
     end
   end
 
@@ -33,7 +31,7 @@ class Train
     @train_route = route.train_route
   end
 
-  def go_to(station)
+  def to_go(station)
     @station_name = station.station_name
     station.new_train(self)
   end
@@ -58,6 +56,12 @@ class Train
 
   def brake
     @speed = 0
+  end
+
+  private
+
+  def show_count_cars
+    puts "#{@count_cars}"
   end
 
 end

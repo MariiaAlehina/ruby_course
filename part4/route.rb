@@ -12,10 +12,12 @@ class Route
   def delete_intermediate_st(station)
     @train_route.delete(station)
   end
-  # protected
+
+  protected
 
   def show_route
     puts "#{@train_route}"
   end
 
 end
+
