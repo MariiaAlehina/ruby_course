@@ -22,3 +22,5 @@ ctr.hook_cars
 ptr.unhook_cars
 ptr.to_go(st)
 st2.train_at_the_station
+ctr.company=("z")
+
