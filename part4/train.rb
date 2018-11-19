@@ -1,24 +1,18 @@
-class Train2
+class Train
 
-  attr_accessor :train_route, :station, :station_name
+  attr_accessor :train_route, :station, :station_name, :cars, :speed
   attr_reader :type
 
   def initialize(number, type, count_cars)
     @number =number
     @type = type
     @count_cars = count_cars.to_i
+    @cars = []
   end
 
-  def speed=(speed)
-    @speed = speed.to_i
-  end
-
-  def show_speed
-    puts "#{@speed}"
-  end
-
-  def brake
-    @speed = 0
+  def addCar(car)
+    cars << car
+    puts "#{@cars}"
   end
 
   def show_count_cars
@@ -50,6 +44,20 @@ class Train2
     puts "The train is at the station #{self.station_name}"
     puts "Past station #{self.train_route[station_index - 1]}"
     puts "Previous station #{self.train_route[station_index + 1]}"
+  end
+
+  protected
+
+  def speed=(speed)
+    @speed = speed.to_i
+  end
+
+  def show_speed
+    puts "#{@speed}"
+  end
+
+  def brake
+    @speed = 0
   end
 
 end
