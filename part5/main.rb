@@ -16,11 +16,11 @@ cargo_train = CargoTrain.new(8, 10)
 passenger_train = PassengerTrain.new(65, 25)
 passenger_car = PassengerCar.new
 cargo_car = CargoCar.new
-cargo_train.addCar(cargo_car)
-passenger_train.addCar(passenger_car)
+cargo_train.add_car(cargo_car)
+passenger_train.add_car(passenger_car)
 cargo_train.hook_cars
 passenger_train.unhook_cars
 passenger_train.to_go(station)
 station2.train_at_the_station
-cargo_car.company=("z")
+cargo_car.company("z")
 

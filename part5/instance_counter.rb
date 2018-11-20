@@ -1,9 +1,10 @@
 module InstanceCounter
-  def self.instances
+    def self.instances
     ObjectSpace.each_object(self).count
-  end
+    end
 
-  def register_instance
-
-  end
+    # def register_instance
+    # @@counter ||=0
+    # @@counter +=1
+    # end
 end
