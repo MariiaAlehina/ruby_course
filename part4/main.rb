@@ -7,17 +7,17 @@ require_relative 'CargoCar'
 require_relative 'PassengerTrain'
 require_relative 'PassengerCar'
 
-st = Station.new("STATION")
-st2 = Station.new("STATION2")
-st3 = Station.new("STATION3")
-r = Route.new("DEPO1", "DEPO2")
-ctr = CargoTrain.new(8, 10)
-ptr = PassengerTrain.new(65, 25)
-pcar = PassengerCar.new
-ccar = CargoCar.new
-ctr.addCar(ccar)
-ptr.addCar(pcar)
-ctr.hook_cars
-ptr.unhook_cars
-ptr.to_go(st)
-st2.train_at_the_station
+station = Station.new("STATION")
+station2 = Station.new("STATION2")
+station3 = Station.new("STATION3")
+route = Route.new("DEPO1", "DEPO2")
+cargo_train = CargoTrain.new(8, 10)
+passenger_train = PassengerTrain.new(65, 25)
+passenger_car = PassengerCar.new
+cargo_car = CargoCar.new
+cargo_train.addCar(cargo_car)
+passenger_train.addCar(passenger_car)
+cargo_train.hook_cars
+passenger_train.unhook_cars
+passenger_train.to_go(station)
+station2.train_at_the_station

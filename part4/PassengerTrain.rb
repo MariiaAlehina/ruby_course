@@ -1,5 +1,4 @@
 class PassengerTrain < Train
-
   def initialize(number, type = "passenger", count_cars)
     super
   end

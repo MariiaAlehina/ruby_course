@@ -18,6 +18,5 @@ class Route
   def show_route
     puts "#{@train_route}"
   end
-
 end
 

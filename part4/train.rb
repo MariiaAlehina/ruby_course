@@ -1,5 +1,4 @@
 class Train
-
   attr_accessor :train_route, :station, :station_name, :cars, :speed
   attr_reader :type
 
@@ -63,5 +62,4 @@ class Train
   def show_count_cars
     puts "#{@count_cars}"
   end
-
 end
