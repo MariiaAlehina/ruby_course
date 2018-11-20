@@ -3,9 +3,9 @@ require_relative 'route'
 require_relative 'train'
 require_relative 'car'
 require_relative 'CargoTrain'
-require_relative 'CargoCar'
-require_relative 'PassengerTrain'
-require_relative 'PassengerCar'
+require_relative 'cargo_car'
+require_relative 'passenger_train'
+require_relative 'passenger_car'
 
 station = Station.new("STATION")
 station2 = Station.new("STATION2")
@@ -15,8 +15,8 @@ cargo_train = CargoTrain.new(8, 10)
 passenger_train = PassengerTrain.new(65, 25)
 passenger_car = PassengerCar.new
 cargo_car = CargoCar.new
-cargo_train.addCar(cargo_car)
-passenger_train.addCar(passenger_car)
+cargo_train.add_car(cargo_car)
+passenger_train.add_car(passenger_car)
 cargo_train.hook_cars
 passenger_train.unhook_cars
 passenger_train.to_go(station)

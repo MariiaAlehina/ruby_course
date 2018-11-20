@@ -3,7 +3,7 @@ class PassengerTrain < Train
     super
   end
 
-  def addCar(car)
+  def add_car(car)
     if car.instance_of?(PassengerCar)
       super(car)
     else

@@ -5,7 +5,7 @@ class Route
     @train_route = [first_station, last_station]
   end
 
-  def intermediate_station(station)
+  def add_intermediate_station(station)
     @train_route.insert(-2, station.station_name)
   end
 
