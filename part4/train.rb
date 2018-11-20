@@ -9,7 +9,7 @@ class Train
     @cars = []
   end
 
-  def addCar(car)
+  def add_car(car)
     cars << car
     puts "#{@cars}"
   end

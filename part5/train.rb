@@ -19,7 +19,7 @@ class Train
     @@trains[number]
   end
 
-  def addCar(car)
+  def add_car(car)
     cars << car
     puts "#{@cars}"
   end
@@ -72,5 +72,4 @@ class Train
   def show_count_cars
     puts "#{@count_cars}"
   end
-
 end
