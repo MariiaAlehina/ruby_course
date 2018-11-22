@@ -1,11 +1,11 @@
 class Train
-  # include Company
-  # include InstanceCounter
+  include Company
+  include InstanceCounter
 
   attr_accessor :train_route, :station, :station_name, :cars, :speed
   attr_reader :type
 
-  @@trains = []
+  # @@trains = []
 
   def initialize(number, type, count_cars)
     @number =number
@@ -17,9 +17,9 @@ class Train
   end
 
 
-  def self.find(number)
-    @@trains[number]
-  end
+  # def self.find(number)
+  #   @@trains[number]
+  # end
 
   def add_car(car)
     cars << car

@@ -1,5 +1,5 @@
 class Train
-  # include Company
+  include Company
   # include InstanceCounter
 
   attr_accessor :train_route, :station, :station_name, :cars, :speed
@@ -12,7 +12,7 @@ class Train
     @type = type
     @count_cars = count_cars.to_i
     @cars = []
-    # @@trains[number] = self
+    @@trains[number] = self
     validate!
   end
 
