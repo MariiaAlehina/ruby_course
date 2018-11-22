@@ -1,6 +1,6 @@
 class Train
   include Company
-  # include InstanceCounter
+  include InstanceCounter
 
   attr_accessor :train_route, :station, :station_name, :cars, :speed
   attr_reader :type
