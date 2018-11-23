@@ -3,7 +3,6 @@ name = gets.chomp
 puts "Height:"
 height = gets.chomp.to_i
 
-
 weight = height - 110
 
 if weight < 0

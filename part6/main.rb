@@ -19,7 +19,6 @@ station_name = gets.chomp
 stations << Station.new(station_name)
 puts "New station #{station_name}"
 
-
 puts "Number train:"
 number = gets.chomp
 puts "Type train:"

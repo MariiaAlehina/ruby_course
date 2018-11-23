@@ -22,19 +22,15 @@ trains = []
 # passenger_train.unhook_cars
 # passenger_train.to_go(station)
 # station2.train_at_the_station
-
-
 puts "Name station:"
 station_name = gets.chomp
 stations << Station.new(station_name)
 puts "New station #{station_name}"
-
-
 puts "Number train:"
 number = gets.chomp
 puts "Type train:"
 type = gets.chomp
 puts "Count cars train:"
 count_cars = gets.chomp
-trains << Station.new(number, type, count_cars)
+trains << Train.new(number, type, count_cars)
 puts "New train #{number}"

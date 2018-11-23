@@ -1,33 +1,22 @@
 loop do
   print"Enter day:"
   day = gets.chomp.to_i
-
   break if day.class == String
-
-
   print "Enter month:"
   month = gets.chomp.to_i
   break if day.class == String
-
-
   print"Enter year:"
   year = gets.chomp.to_i
   break if day.class == String
 
-dm = [31, 28, 31, 30, 31, 30, 31, 30, 31, 30, 31]
-dm[1] = 29 if (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)
+  dm = [31, 28, 31, 30, 31, 30, 31, 30, 31, 30, 31]
+  dm[1] = 29 if (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)
+  serial_nmd = day
 
-
-      serial_nmd = day
-
-      for i in 0...month-1
-
-        serial_nmd += dm[i]
-
-      end
-
- puts "#{serial_nmd}"
-
+  for i in 0...month-1
+   serial_nmd += dm[i]
+  end
+   puts "#{serial_nmd}"
 end
 
 
