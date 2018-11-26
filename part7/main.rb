@@ -13,6 +13,8 @@ stations = []
 trains = []
 routes = []
 cars = []
+cargo_cars= []
+passenger_cars = []
 
 puts "Name station:"
 station_name = gets.chomp
@@ -41,5 +43,12 @@ type = gets.chomp
 cars << Car.new(type)
 puts "New car #{type}"
 
+puts "Volume new cargo car:"
+overall_volume = gets.chomp
+cargo_cars << CargoCar.new(overall_volume, type = "cargo")
+puts "New car with type: #{type} have volume=#{overall_volume}"
 
-
+puts "Count of seats new passenger car:"
+take_seat = gets.chomp
+passenger_cars << CargoCar.new(take_seat, type = "passenger")
+puts "New car with type: #{type} have volume=#{take_seat}"

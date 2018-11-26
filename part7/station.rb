@@ -25,6 +25,9 @@ class Station
   rescue
     false
   end
+  def every_train_at_station(&block)
+    @trains.each{|train|block.call(train)}
+  end
 
   protected
   def validate!

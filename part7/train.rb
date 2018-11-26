@@ -1,6 +1,6 @@
 class Train
-  include Company
-  include InstanceCounter
+  # include Company
+  # include InstanceCounter
 
   attr_accessor :train_route, :station, :station_name, :cars, :speed
   attr_reader :type
@@ -11,7 +11,7 @@ class Train
     @type = type
     @count_cars = count_cars.to_i
     @cars = []
-    @@trains[number] = self
+    # @@trains[number] = self
     validate!
   end
   def self.find(number)
@@ -56,7 +56,9 @@ class Train
     raise "Type should be no more than 6 symbols" if @type.length > 6
     raise "Type has invalid format" if @type !~ /^[a-z0-9]/i
   end
-
+  def every_car_in_train(&block)
+    @cars.each{|car|block.call(car)}
+  end
   protected
   def speed=(speed)
     @speed = speed.to_i
