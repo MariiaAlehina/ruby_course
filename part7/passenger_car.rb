@@ -16,6 +16,6 @@ class PassengerCar < Car
 
   def free_seats
     free_seats = @count_seats - @take_seat
-    puts "Free seats: #{free_seats}"
+    puts "Free seats: #{ free_seats }"
   end
 end

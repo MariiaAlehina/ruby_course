@@ -1,7 +1,8 @@
 class PassengerTrain < Train
-  def initialize(number, type = "passenger", count_cars)
+  def initialize(number, count_cars, type = "passenger")
     super
   end
+
   def add_car(car)
     if car.instance_of?(PassengerCar)
       super(car)
