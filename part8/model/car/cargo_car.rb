@@ -11,11 +11,11 @@ class CargoCar < Car
   end
 
   def occupied_seats
-    puts "Occupied seats: #{ @take_volume }"
+    puts "Occupied seats: #{@take_volume}"
   end
 
   def free_volume
     free_volume = @overall_volume - @take_volume
-    puts "Free volume: #{ free_volume }"
+    puts "Free volume: #{free_volume}"
   end
 end

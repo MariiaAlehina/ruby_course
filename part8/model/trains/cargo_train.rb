@@ -7,7 +7,7 @@ class CargoTrain < Train
     if car.instance_of?(CargoCar)
       super(car)
     else
-      puts 'This train only for cargo'
+      puts "This train only for cargo"
     end
   end
 end
