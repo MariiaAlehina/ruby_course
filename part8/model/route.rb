@@ -27,6 +27,7 @@ class Route
   end
 
   def show_route
+    @train_route.to_s
     puts "#{@train_route}"
   end
 end
