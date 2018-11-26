@@ -13,5 +13,5 @@ months = {
     December: 31
 }
 # months = Hash[months.map {|m, d| [m.to_sym, d]}]
-a = months.select {|m, d| d == 30 }
+a = months.select{ |m, d| d == 30 }
 puts "#{a.keys}"

@@ -11,12 +11,12 @@ class Train
     @type = type
     @count_cars = count_cars.to_i
     @cars = []
-    # @@trains[number] = self
+    @@trains = {number: self}
     validate!
   end
 
   def self.find(number)
-    @@trains[number]
+    @@trains.select{|number, train| number==number}
   end
 
   def add_car(car)
@@ -61,7 +61,7 @@ class Train
 
   def validate!
     raise "Number can't be nill" if @number.nil?
-    raise "Number has invalid format" if @number !~ /^[a-z]{3}/i
+    raise "Number has invalid format" if @number !~ /^[a-z]{3}$|^[0-9]{5}$|^[a-z0-9]{2}([-])[a-z0-9]{2}$/i
     raise "Type should be no more than 6 symbols" if @type.length > 6
     raise "Type has invalid format" if @type !~ /^[a-z0-9]/i
   end

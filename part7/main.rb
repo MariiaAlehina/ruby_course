@@ -44,7 +44,7 @@ puts "New car #{ type }"
 
 puts "Volume new cargo car:"
 overall_volume = gets.chomp
-cargo_cars << CargoCar.new(overall_volume, type = "cargo")
+cargo_cars << CargoCar.new(overall_volume)
 puts "New car with type: #{ type } have volume=#{ overall_volume }"
 
 puts "Count of seats new passenger car:"
