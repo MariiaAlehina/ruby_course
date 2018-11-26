@@ -21,7 +21,6 @@ station_name = gets.chomp
 stations << Station.new(station_name)
 puts "New station #{station_name}"
 
-
 puts "Number train:"
 number = gets.chomp
 puts "Type train:"
@@ -29,7 +28,7 @@ type = gets.chomp
 puts "Count cars train:"
 count_cars = gets.chomp
 trains << Train.new(number, type, count_cars)
-puts "New train #{number}"
+puts "New train #{number}, type=#{type}, count of cars=#{count_cars}"
 
 puts "First station for route:"
 first_station = gets.chomp

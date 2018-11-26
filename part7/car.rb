@@ -5,11 +5,13 @@ class Car
     @type = type
     validate!
   end
+
   def valid?
     validate!
   rescue
     false
   end
+
   def validate!
     raise "Type can't be nill" if @type.nil?
     raise "Type should be no more than 6 symbols" if @type.length > 21

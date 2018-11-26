@@ -56,8 +56,8 @@ class Train
     raise "Type should be no more than 6 symbols" if @type.length > 6
     raise "Type has invalid format" if @type !~ /^[a-z0-9]/i
   end
-  def every_car_in_train(&block)
-    @cars.each{|car|block.call(car)}
+  def every_car_in_train
+    @cars.each{|car|yield(car)}
   end
   protected
   def speed=(speed)

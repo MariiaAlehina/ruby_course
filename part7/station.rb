@@ -25,8 +25,8 @@ class Station
   rescue
     false
   end
-  def every_train_at_station(&block)
-    @trains.each{|train|block.call(train)}
+  def every_train_at_station
+    @trains.each{|train|yield(train)}
   end
 
   protected
