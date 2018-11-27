@@ -41,13 +41,14 @@ puts "Type new car:"
 type = gets.chomp
 cars << Car.new(type)
 puts "New car #{type}"
-
-puts "Volume new cargo car:"
-overall_volume = gets.chomp
-cargo_cars << CargoCar.new(overall_volume)
-puts "New car with type: #{type} have volume=#{overall_volume}"
-
-puts "Count of seats new passenger car:"
-take_seat = gets.chomp
-passenger_cars << CargoCar.new(take_seat, type = "passenger")
-puts "New car with type: #{type} have volume=#{take_seat}"
+if type="cargo"
+  puts "Volume new cargo car:"
+  overall_volume = gets.chomp
+  cargo_cars << CargoCar.new(overall_volume)
+  puts "New car with type: #{type} have volume=#{overall_volume}"
+else
+  puts "Count of seats new passenger car:"
+  take_seat = gets.chomp
+  passenger_cars << PassengerCar.new(take_seat)
+  puts "New car with type: #{type} have volume=#{take_seat}"
+end
